@@ -1,0 +1,353 @@
+/* FONTS */
+/*
+@font-face {
+  font-family: "Amitic";
+  src: url("amaticsc/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: url("josefinsans/JosefinSans-SemiBold.ttf");
+}
+*/
+@font-face {
+  font-family: "Shadows Into Light";
+  src: url("../fonts/ShadowsIntoLight.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+
+/* ============================================================
+  RESET
+============================================================ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a img {
+  border: none;
+}
+
+/* ============================================================
+  GLOBALS
+============================================================ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* clear floated divs */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/* ============================================================
+  TEMPLATE
+============================================================ */
+html {
+	background: radial-gradient(#00A8E8,#003459);
+	min-height: 100%;
+	overflow:hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #00171F;
+}
+
+.modal-wrap {
+  max-width: 600px;
+  margin: 50px auto;
+  transition: transform 300ms ease-in-out;
+}
+
+.modal-header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal-bodies {
+  position: relative;
+  perspective: 1000px;
+}
+
+.modal-body {
+  background: #ffffff;
+  padding: 40px 100px;
+  box-shadow: 0px 50px 30px -30px rgba(0,0,0,0.3);
+  margin-bottom: 50px;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  transform-origin: top left;
+  display: block;
+}
+
+.is-showing {
+	display: block;
+}
+
+
+
+
+
+
+/*
+.example-enter {
+
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+*/
+
+.example-enter.example-enter-active {
+  animation: in 500ms ease-in-out forwards;
+}
+
+
+.example-leave.example-leave-active {
+  animation: out 600ms ease-in-out forwards;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.animate-out {
+	-webkit-animation: out 600ms ease-in-out forwards;
+	-moz-animation: out 600ms ease-in-out forwards;
+	-o-animation: out 600ms ease-in-out forwards;
+	 animation: out 600ms ease-in-out forwards;
+}
+
+.animate-in {
+	animation: in 500ms ease-in-out forwards;
+	display: block;
+}
+/*
+@keyframes out {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+	}
+	60% {
+    transform: rotate(80deg);
+	}
+  100% {
+    transform: translateY(800px) rotate(10deg);
+	}
+}
+*/
+
+@keyframes out {
+  0%{
+    transform: rotateX(0deg);
+	}
+  100%{
+    transform: translateX(1200px);
+	}
+}
+
+
+@keyframes in {
+  0%{
+    opacity: 0;
+    transform: rotateX(-90deg);
+	}
+  100%{
+    opacity: 1;
+    transform: rotateX(0deg);
+	}
+}
+
+.result  {
+	font-size: 3em;
+  width: 100%;
+  display: block;
+  text-align: center;
+  /*margin-top: 10px;*/
+}
+
+/* headings */
+h2 {
+  font-size: 6em;
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  text-align: center;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="text"].style-2 {
+  padding: 10px;
+  border: solid 5px #007EA7;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+}
+input[type="text"].style-2:focus {
+  border: solid 5px #003459;
+}
+
+#btnDiv {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #007EA7;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: #198314;
+  text-decoration: none;
+}
+
+.btn:active {
+  cursor: pointer;
+  color: #ffffff;
+  background: #056200;
+  text-decoration: none;
+}
+
+.successImg {
+  /*background: url('../img/gatsby.gif') no-repeat;*/
+  width: 400px;
+  height: 200px;
+}
