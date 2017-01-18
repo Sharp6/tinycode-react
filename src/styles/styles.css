@@ -351,3 +351,10 @@ input[type="text"].style-2:focus {
   width: 400px;
   height: 200px;
 }
+
+.userDiv {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: #f00;
+}

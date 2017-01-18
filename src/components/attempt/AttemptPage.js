@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import fbInstance from '../../common/database';
 
 class AttemptPage extends React.Component {
   constructor(props) {
@@ -7,6 +8,14 @@ class AttemptPage extends React.Component {
     this.state = {
       code: ''
     };
+  }
+  
+  componentDidMount() {
+	const database = fbInstance.database().ref('/codes');
+    console.log("I mounted!");
+      database.once('value', snap => {
+      console.log("data", snap.val()); 
+    });
   }
 
   handleChange(event) {

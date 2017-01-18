@@ -1,9 +1,12 @@
 import React, {PropTypes} from 'react';
 import { RouteTransition } from 'react-router-transition';
+import AuthPart from './user/AuthPart';
 
 class App extends React.Component {
   render() {
     return (
+    <div>
+      <AuthPart/>
       <div className="modal-wrap">
         <div className="modal-header"><h2>CodeBreaker</h2></div>
           <div className="modal-bodies">
@@ -18,6 +21,7 @@ class App extends React.Component {
             </RouteTransition>
           </div>
       </div>
+    </div>
     );
   }
 }
