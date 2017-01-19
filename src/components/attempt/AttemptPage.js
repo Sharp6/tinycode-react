@@ -9,12 +9,12 @@ class AttemptPage extends React.Component {
       code: ''
     };
   }
-  
+
   componentDidMount() {
-	const database = fbInstance.database().ref('/codes');
+    const database = fbInstance.database().ref('/codes');
     console.log("I mounted!");
       database.once('value', snap => {
-      console.log("data", snap.val()); 
+      console.log("data", snap.val());
     });
   }
 

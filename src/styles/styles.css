@@ -328,8 +328,6 @@ input[type="text"].style-2:focus {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-
-
 }
 
 .btn:hover {
@@ -356,5 +354,9 @@ input[type="text"].style-2:focus {
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	background: #f00;
+}
+
+.userDiv i {
+  color: #fff;
+  font-size: 40px;
 }

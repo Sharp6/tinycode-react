@@ -10,10 +10,9 @@ class AuthPart extends React.Component {
   render() {
     return (
       <div className="userDiv">
-		I am user
-		<Link to="/login">login</Link>
-	  </div>
-	);
+        <Link to="/login"><i className="fa fa-cogs" aria-hidden="true"></i></Link>
+      </div>
+	  );
   }
 }
 
