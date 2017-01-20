@@ -121,7 +121,7 @@ a {
 html {
 	background: radial-gradient(#00A8E8,#003459);
 	min-height: 100%;
-	overflow:hidden;
+	/*overflow:hidden;*/
 }
 
 body {
@@ -306,6 +306,8 @@ input[type="text"].style-2 {
   -moz-transition: border 0.3s;
   -o-transition: border 0.3s;
   transition: border 0.3s;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 input[type="text"].style-2:focus {
   border: solid 5px #003459;
@@ -345,7 +347,7 @@ input[type="text"].style-2:focus {
 }
 
 .successImg {
-  /*background: url('../img/gatsby.gif') no-repeat;*/
+  background: url('../img/gatsby.gif') no-repeat;
   width: 400px;
   height: 200px;
 }
@@ -358,5 +360,46 @@ input[type="text"].style-2:focus {
 
 .userDiv i {
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+.codeTable {
+  width: 98%;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.codeTable tbody tr {
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: #eee;
+}
+
+thead th {
+  width: 33%;
+  background-color: #007EA7;
+  color: #fff;
+}
+
+.twoColumns {
+  width: 100%;
+  padding: 1%;
+}
+
+.left {
+  display: float;
+  float: left;
+  width: 48%;
+}
+
+.right {
+  width: 48%;
+  display: float;
+  float: right;
+}
+
+.fa-trash-o {
+  color: #00171F;
 }

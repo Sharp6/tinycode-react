@@ -28,14 +28,14 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="modal-body">
-      <h1>Login!</h1>
-      <input type="text" value={this.state.email} onChange={this.handleEmailChange.bind(this)} className="style-2" />
-      <input type="text" value={this.state.password} onChange={this.handlePasswordChange.bind(this)} className="style-2" />
-      <a href="#" onClick={this.signIn.bind(this)}>Sign in</a>
-      <Link to="/attempt">Check code</Link>
+        <p>Voor deze pagina moet je inloggen:</p>
+        <input type="text" value={this.state.email} onChange={this.handleEmailChange.bind(this)} className="style-2" placeholder="email" />
+        <input type="text" value={this.state.password} onChange={this.handlePasswordChange.bind(this)} className="style-2" placeholder="wachtwoord" />
+
+        <div id="btnDiv"><a className="btn noselect" href="#" onClick={this.signIn.bind(this)}>Log in</a></div>
+        <div id="btnDiv"> <Link className="btn noselect" to="/attempt">Terug</Link></div>
       </div>
     );
-
   }
 }
 

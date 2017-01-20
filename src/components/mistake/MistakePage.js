@@ -6,8 +6,9 @@ class MistakePage extends React.Component {
     return (
       <div className="modal-body">
         <h1>Jammer!</h1>
-        <p>Motivational poster.</p>
-        <Link to="/attempt">Try again!</Link>
+				<p>Waarschijnlijk had je maar een klein foutje. Klik op de knop hieronder om een andere code te proberen.</p>
+				<div id="btnDiv"><Link to="/attempt" className="btn noselect">Try again!</Link></div>
+
       </div>
     );
   }

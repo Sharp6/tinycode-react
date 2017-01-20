@@ -12,9 +12,7 @@ class AttemptPage extends React.Component {
 
   componentDidMount() {
     const database = fbInstance.database().ref('/codes');
-    console.log("I mounted!");
       database.once('value', snap => {
-      console.log("data", snap.val());
     });
   }
 
@@ -25,10 +23,11 @@ class AttemptPage extends React.Component {
   render() {
     return (
       <div className="modal-body">
-        <h1>Place your bets!</h1>
-        <p>Now in react style.</p>
+        <p>
+					Welkom bij Janssens CodeBreaker. Vul hieronder je code in, controleer je code en wacht af!
+				</p>
         <input type="text" value={this.state.code} onChange={this.handleChange.bind(this)} className="style-2" autoComplete="off" />
-        <Link to={`/result/0/${this.state.code}`}>Check code</Link>
+        <div id="btnDiv"><Link className="btn noselect" to={`/result/0/${this.state.code}`}>Controleer code</Link></div>
       </div>
     );
   }
